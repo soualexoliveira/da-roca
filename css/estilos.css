@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+}
+
+.cabecalho {
+    background-color: #121212;
+
+}
+
+.cabecalho img{
+    width: 120px;
+
+}
+
+nav a{
+    color: #ffffff;
+}
+
+
+background-color: #AFC638;
