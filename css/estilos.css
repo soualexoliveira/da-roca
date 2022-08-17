@@ -7,23 +7,149 @@
     text-decoration: none;
 }
 
-body{
+body {
     font-size: 100%;
 }
 
-.cabecalho {
-    background-color: #121212;
-
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2vh;
+    width: 100vw;
+    position: absolute;
+    gap: 40vw;
+    background-color:none;
 }
 
-.cabecalho img{
-    width: 120px;
-
+.logo{
+    color: #ffffff;
+    width:11vw;
+    /*background-color:aqua;*/
 }
 
-nav a{
+.logo h1{
+    font-family: 'Allura', cursive;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.menu{
+    width: 30vw;
+    /*background-color:aqua;*/
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2vw;
+}
+
+.menu li{
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.menu a{
     color: #ffffff;
 }
 
+.chamada{
+    background: url("../image/principal.png");
+    background-size:cover;
+    width: 100vw;
+    height: 100vh;
+    /*background-attachment: fixed;*/
+}
 
-background-color: #AFC638;
+.titulo {
+    width: 100vw;
+    height: 100vh;
+    padding: 65vh 5vw 0vh 40vw;
+}
+
+.titulo h2{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: right;
+    margin-bottom: 5vh;
+    /*background-color:blue;*/
+
+}
+
+.titulo #btn-produtos{
+    height: 6vh;
+    width: 10vw;
+    cursor: pointer;
+    text-decoration:underline;
+    border: none;
+    background: none;
+    border: none;
+    /*background: black;*/
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color:#ffffff;
+    margin: 0vh 0vw 0vh 33.5vw;
+}
+
+.titulo #btn-wherebuy{
+    height: 6vh;
+    width: 10.8vw;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0vh 0vw 0vh 0.4vw;
+}
+
+.lavouras{
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+}
+
+.produtos{
+    width: 100vw;
+    height: 100vh;
+    background-color:darkgreen;
+}
+
+.lojas{
+    width: 100vw;
+    height: 100vh;
+    background-color:blueviolet;
+}
+
+.contato{
+    width: 100vw;
+    height: 100vh;
+    background-color:darkred;
+}
+/*background-color: #AFC638;*/
+
+@media screen and (max-device-width: 2560px) /*4k*/{
+    
+}
+@media screen and (max-device-width: 1440px) /*2k*/{
+
+}
+@media screen and (max-device-width: 1080px) /*FullHD*/{
+
+}
+@media screen and (max-device-width: 768px) /*Tablet*/{
+
+}
+@media screen and (max-device-width: 425px) /*Celular*/{
+
+}
