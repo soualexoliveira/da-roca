@@ -4,30 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/estilos.css">
+    <script src="javascript/script.js"></script>
     <title>Da Roça - Sucos Cítricos</title>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo"><h1>Da Roça</h1></a>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Início</a>
-                <li><a href="index.html">Lavouras</a>
-                <li><a href="index.html">Produtos</a>
-                <li><a href="index.html">Lojas</a>
-                <li><a href="index.html">Contato</a>
-            </ul>
-        </nav>
+        <div class="faixa1" id="inicio">
+            <div class="logo">
+                <h1><a href="#inicio">Da Roça</a></h1>
+                <p id="slogan">do mato para o mundo</p>
+            </div>
+            <div class="certificados-membros">
+                <div class="certificados">
+                    <img src="./image/certificado.png" alt="Certificado Kosher">
+                    <img src="./image/certificado.png" alt="Certificado HACCP(APPCC)">
+                    <img src="./image/certificado.png" alt="Orgânico USDA">
+                    <img src="./image/certificado.png" alt="Orgânico EU">
+                    <img src="./image/certificado.png" alt="Certificação por Auditoria Produto Orgânico Brasil - MAPA e Inmetro">
+                    <img src="./image/certificado.png" alt="Certificado de Produto Vegano">
+                </div>
+                <div class="membros">
+                    <img src="./image/certificado.png" alt="Sedex – Empowering Responsible Supply Chains">
+                    <img src="./image/certificado.png" alt="SGF (Sure Global Fair)">
+                </div>
+            </div>
+        </div>
+        <div class="faixa2">
+            <nav class="menu">
+                <ul>
+                    <li id="menu-inicio"><a href="#inicio">Início<div class="border"></div></a></li>
+                    <li id="menu-historia"><a href="#historia">Sobre Nós</a></li>
+                    <li id="menu-produtos"><a href="#produtos">Produtos</a></li>
+                    <li id="menu-lojas"><a href="#lojas">Lojas</a></li>
+                    <li id="menu-contato"><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <ul>
+                    <li><a href="#" alt="Facebook"><img src="./image/certificado.png"></a></li>
+                    <li><a href="#" alt="Instagram"><img src="./image/certificado.png"></a></li>
+                    <li><a href="#" alt="Youtube"><img src="./image/certificado.png"></a></li>
+                    <li><a href="#" alt="WhatsApp"><img src="./image/certificado.png"></a></li>
+                </ul>
+            </div>
+            <div class="acessibilidade">
+                <ul>
+                    <li><a href="#" alt="modo-escuro"><img src="./image/certificado.png"></a></li>
+                    <li><a href="#" alt="pesquisa"><img src="./image/certificado.png"></a></li>
+                </ul>
+            </div>
+        </div>
     </header>
     <main>
-        <section class="chamada">
-            <div class="titulo">
-                <h2>Sucos Cítricos totalmente naturais.<br/> Todas as frutas são colhidas em<br/> nossas próprias lavrouras.</h2>
-                <button id="btn-produtos">Nossos Produtos</button>
-                <button id="btn-wherebuy">Onde Comprar</button>
+        <section id="chamada">
+            <div id="chamada-box">
+                <div class="chamada-box1">
+                    <div class="chamada-titulo">
+                        <h2>Sucos Cítricos totalmente naturais. Todas as frutas são colhidas em nossas próprias lavrouras.</h2>
+                    </div>
+                    <div class="chamada-btn">
+                        <a href="#produtos" role="button" id="btn-produtos">Nossos Produtos</a>
+                        <a href="#lojas" role="button" id="btn-wherebuy" class="btn-wherebuy-1">Onde Comprar</a>
+                    </div>
+                </div>
+                <div class="chamada-imagem" onmouseover="prepare(this)">
+                    <video class="video-view" muted loop>
+                        <source src="video/laranjeiraHD.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-camada">
+                        <div class="video-seletor">
+                            <div class="video-play"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="lavouras">
+        <div class="btn-topo" href="#"></div>
+        <section id="historia">
         <!--<div class="certificados">
                 <p>Certificado Kosher</p>
                 <p>Certificado HACCP(APPCC)</p>
@@ -45,13 +98,13 @@
             </div>
         -->
         </section>
-        <section class="produtos">
+        <section id="produtos">
           
         </section>
-        <section class="lojas">
+        <section id="lojas">
 
         </section>
-        <section class="contato">
+        <section id="contato">
 
         </section>
     </main>
