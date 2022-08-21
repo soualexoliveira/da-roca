@@ -29,3 +29,13 @@ function play(){
     }
 }
 
+// aparecer/desaparecer idiomas qnd apertar no icone
+function Mudarestado(idiomas) {
+    var display = document.getElementById(idiomas).style.display;
+    if(display == "none"){
+        document.getElementById(idiomas).style.display = 'block';
+    }else{
+        document.getElementById(idiomas).style.display = 'none';
+
+    }
+}
