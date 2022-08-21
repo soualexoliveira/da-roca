@@ -9,7 +9,7 @@ function prepare(elem){
 
         view = playerVideo.querySelector(".video-view");
 
-        btnPlay = playerVideo.querySelector(".video-play");
+        btnPlay = playerVideo.querySelector(".fa-circle-play");
         btnPlay.addEventListener('click', play);
     }
 }
@@ -18,11 +18,11 @@ function play(){
     if(view.played.length != 0){
         if (view.played.start(0)==0 && !view.paused) {
             view.pause();
-            btnPlay.style.backgroundImage = "url(../icon/play.png)";
+            btnPlay.style.backgroundImage = ".fa-circle-play";
         }
         else{
             view.play();
-            btnPlay.style.backgroundImage = "url(../icon/pause.png)";
+            btnPlay.style.backgroundImage = ".fa-circle-pause";
         }
     }else{
         view.play();
