@@ -31,11 +31,20 @@ function play(){
 
 // aparecer/desaparecer idiomas qnd apertar no icone
 function Mudarestado(idiomas) {
-    var display = document.getElementById(idiomas).style.display;
+    const display = document.querySelector("#idiomas").style.display;
     if(display == "none"){
-        document.getElementById(idiomas).style.display = 'block';
+        document.getElementById(idiomas).style.display = 'flex';
     }else{
         document.getElementById(idiomas).style.display = 'none';
 
     }
 }
+
+// mudar tema claro/escuro
+const theme = document.querySelector(".light-dark");
+
+theme.addEventListener('click', () => {
+    document.body.classList.toggle('.dark-theme');
+//alterar icones sol e lua
+
+})

@@ -1,6 +1,99 @@
 #historia{
-    width: 95%;
-    height: 100vh;
+    background-image: linear-gradient(#e8e8e8, #f2b7058a, #F2B7058a);
+}
+
+.historia{
+    width: 95vw;
     margin: 0 auto;
-    border: 2px solid #F2B705;
+}
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+}
+
+.titulo-sobre h3{
+    font-family: 'Allura', cursive;
+    font-weight: 400;
+    font-size: 4rem;
+    margin-left: 1.5vw;
+}
+
+.content-sobre{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 3vw;
+    margin: 2vw 0vw;
+}
+
+.texto-sobre{
+    width: 30vw;
+    height: 17vw;
+}
+
+.foto-sobre{
+    width: 30vw;
+    height: 17vw;
+}
+
+.texto-sobre1{
+    width: 30vw;
+    height: 17vw;
+}
+
+.foto-sobre1{
+    width: 30vw;
+    height: 17vw;
+}
+
+.texto-sobre p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.texto-sobre1 p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: right;
+}
+
+.line-break{
+    display: block;
+    margin-bottom: 2vw;
+}
+
+.foto-sobre img{
+    height: 17vw;
+    float: right;
+}
+
+.foto-sobre1 img{
+    height: 17vw;
+}
+
+.mundi{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 2vw;
+    margin: 4vw 0vw;
+}
+
+.mundi p{
+    width: 60vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    text-align: center;
+}
+
+.mundi img{
+    width: 60vw;
 }
