@@ -1,29 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600&display=swap');
 
 :root{
-    --color-text: #0D0D0D;
+    --color-text-menu: #0D0D0D;
+    --color-text: #e8e8e8;
     --color-bg: #e8e8e8;
     --color-text-footer: #0D0D0Daa;
-    --color-video-hover: #ffffff33;
-    --color-btn-tobuy: #e8e8e8aa;
-    --color-btn-tobuy-hover: #ffffffaa;
+    --color-text-footer-link: #0d0d0d;
+    --color-video-hover: #00000033;
+    --color-btn: #e8e8e8;
+    --color-btn-hover: #ffffff;
     --color-border: #0D0D0D66;
     --color-one: #467302;
     --color-two: #f2b705;
     --color-three: #F2360C;
+
+    --lua: block;
+    --sol: none;
 }
 
-.dark-theme{
-    --color-text: #e8e8e8;
-    --color-bg: #0d0d0d;
-    --color-text-footer: #e8e8e8Daa;
-    --color-video-hover: #00000033;
+.dark{
+    --color-text-menu: #e8e8e8;
+    --color-bg: #1b1b1b;
+    --color-text-footer: #e8e8e8aa;
+    --color-text-footer-link: #e8e8e8;
+    --color-video-hover: #00000066;
     --color-btn-tobuy: #0d0d0daa;
-    --color-btn-tobuy-hover: #000000aa;
+    --color-btn-tobuy-hover: #ffffffaa;
     --color-border: #e8e8e866;
-    --color-one: #f2b705;
+    --color-one: #e41e23;
     --color-two: #467302;
-    --color-three: #F2360C;
+    --color-three: #f2b705;
+
+    --lua: none;
+    --sol: block;
 }
 
 *, :before, :after {
@@ -70,17 +79,17 @@ header {
 }
 
 .faixa1 .logo a{
-    color: var(--color-text);
+    color: var(--color-text-menu);
 }
 
 .logo #slogan{
     width: 60%;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    color: var(--color-text);
+    color: var(--color-text-menu);
     font-size: 1rem;
     padding-left: 7%;
-    border-left: 0.1vw solid var(--color-text);
+    border-left: 0.1vw solid var(--color-text-menu);
     height: 2vw;
     line-height: 2vw;
 }
@@ -104,7 +113,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 6vh;
-    padding: 0 2% 0 0;
+    padding: 0 2.2% 0 0;
 }
 .menu{
     width: 60%;
@@ -130,7 +139,7 @@ header {
     height: 6vh;
     display: inline-block;
     text-align: center;
-    color: var(--color-text);
+    color: var(--color-text-menu);
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 1rem;
@@ -157,7 +166,7 @@ header {
 }
 
 .social-media{
-    width: 23%;
+    width: 27.5%;
 }
 
 .social-media ul{
@@ -173,7 +182,7 @@ header {
 }
 
 .social-media ul li a{
-    color:var(--color-text);
+    color:var(--color-text-menu);
 }
 
 .social-media ul li a .fa-brands{
@@ -185,8 +194,8 @@ header {
 }
 
 .acessibilidade{
-    width: 12%;
-    border-left: 0.1vw solid var(--color-text);
+    width: 7%;
+    border-left: 0.1vw solid var(--color-text-menu);
 }
 
 .acessibilidade ul{
@@ -194,8 +203,7 @@ header {
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    gap: 10%;
-    
+    gap: 15%;
 }
 
 .acessibilidade ul li{
@@ -204,7 +212,7 @@ header {
 }
 
 .acessibilidade ul li i{
-    color:var(--color-text);
+    color:var(--color-text-menu);
     font-size: 1.5vw;
     cursor: pointer;
 }
@@ -213,27 +221,27 @@ header {
     color: var(--color-one);
 }
 
-.acessibilidade ul li #idiomas{
+#idiomas{
     position: absolute;
     top: 0%;
-    right: 150%;
+    right: 120%;
     padding: 0% 40%;
     height: 100%;
     display: none;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    color:var(--color-text);
+    color:var(--color-text-menu);
     font-size: 1em;
+    background-color: var(--color-bg);
 }
 
 .select-idioma{
-    margin: 0% 15%;
+    margin: 0% 7.5%;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    
 }
 .divisor-idiomas{
     font-family: 'Inter', sans-serif;
@@ -241,16 +249,18 @@ header {
     font-size: 1rem;
 }
 
-.light-dark .fa-moon{
-    position: relative;
-    display: block;
-}
-.light-dark .fa-sun{
-    position: absolute;
-    top: 0;
-    left: 0;
+input[type="checkbox"]{
     display: none;
 }
+
+.fa-sun{
+    display: var(--sol);
+}
+
+.fa-moon{
+    display: var(--lua);
+}
+
 #chamada{
     width: 95%;
     margin: 0 auto;
@@ -265,7 +275,7 @@ header {
 
 .chamada-box1 {
     width: 45%;
-    height: 75.1vh;
+    height: 76.1vh;
     background-color:var(--color-one);
     z-index: 2;
     position:absolute;
@@ -288,7 +298,7 @@ header {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 2rem;
-    color: var(--color-bg);
+    color: var(--color-text);
     line-height: 2.6vw;
 }
 
@@ -296,82 +306,65 @@ header {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1.1rem;
-    color: var(--color-bg);
+    color: var(--color-text);
     line-height: 1.5vw;
 }
 
 .chamada-btn{
+    width: 27vw;
+    height: 8vh;
     display: flex;
     flex-direction: row;
+    gap: 0.7vw;
+    align-items: center;
 }
 
 .chamada-btn #btn-produtos{
     padding: 1vw 1.3vw;
-    height: 3.5vw;
+    height: 7.2vh;
     width: 12vw;
     cursor: pointer;
     text-decoration:none;
-    border: 0.2vw solid var(--color-bg);
+    border: 0.2vw solid var(--color-btn);
     border-radius: 2vw;
     text-align: center;
     background: none;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 1rem;
-    color:var(--color-bg);
+    color:var(--color-btn);
     transition: all 500ms ease;
 }
 
 .chamada-btn #btn-produtos:hover{
-    background-color: var(--color-bg);
+    background-color: var(--color-btn);
     color:var(--color-one);
-    
 }
 
 .chamada-btn #btn-wherebuy{
     padding: 1.2vw 1.3vw;
     width: 12vw;
-    height: 3.5vw;
+    height: 7.2vh;
     cursor: pointer;
     text-decoration: none;
     border-radius: 2vw;
     text-align: center;
-    background-color: var(--color-btn-tobuy);
+    background-color: var(--color-btn);
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 1rem;
-    margin-left: 1%;
-    color:#467302;
-    position: relative;  
-    overflow: hidden;
-    display: block;
+    color:var(--color-one);
 }
 
-.chamada-btn .btn-wherebuy-1{
-    background-color: var(--color-bg);
-    
-}
+.chamada-btn #btn-wherebuy:hover{
+    width: 12.2vw;
+    height: 7.5vh;
 
-.chamada-btn .btn-wherebuy-1:before{
-    content:'';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 0px;
-    height: 3.7vw;
-    background-color: var(--color-btn-tobuy-hover);
-    border-radius: 2vw;
-    transition: all 400ms ease;
-    z-index: -1;
-}
-
-.chamada-btn .btn-wherebuy-1:hover:before{
-    width: 100%;
 }
 
 .chamada-imagem{
     width: 100%;
-    height: 75.1vh;
+    height: 76vh;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -403,18 +396,30 @@ header {
     width: 100%;
     height: 100%;
 }
-.fa-circle-play{
+
+#playbtn{
     font-size: 6.5em;
-    color: transparent;
     cursor: pointer;
+    color: transparent;
+    display: none;
 }
 
+#pausebtn{
+    font-size: 6.5em;
+    cursor: pointer;
+    color: transparent;
+    display: block;
+}
 .video-camada:hover{
     background-color:var(--color-video-hover);
 }
 
-.video-camada:hover .fa-circle-play{
-    color: var(--color-bg);
+.video-camada:hover #playbtn{
+    color: var(--color-btn);
+}
+
+.video-camada:hover #pausebtn{
+    color: var(--color-btn);
 }
 
 footer{
@@ -432,6 +437,6 @@ footer{
 }
 
 footer a{
-    color: var(--color-text);
+    color: var(--color-text-footer-link);
     font-weight: 500;
 }

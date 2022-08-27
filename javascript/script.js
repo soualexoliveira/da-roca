@@ -1,50 +1,85 @@
-// play e pause do video principal
-var playerVideo, view;
+// MODO DARK
+const changeThemeBtn = document.querySelector("#change-theme");
 
-var btnPlay;
+function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+}
 
-function prepare(elem){
-    if(playerVideo != elem){
-        playerVideo = elem;
+function loadTheme() {
+    const darkMode = localStorage.getItem('dark');
 
-        view = playerVideo.querySelector(".video-view");
-
-        btnPlay = playerVideo.querySelector(".fa-circle-play");
-        btnPlay.addEventListener('click', play);
+    if (darkMode) {
+        toggleDarkMode();
     }
 }
 
-function play(){
-    if(view.played.length != 0){
-        if (view.played.start(0)==0 && !view.paused) {
-            view.pause();
-            btnPlay.style.backgroundImage = ".fa-circle-play";
-        }
-        else{
-            view.play();
-            btnPlay.style.backgroundImage = ".fa-circle-pause";
-        }
-    }else{
-        view.play();
-    }
-}
+loadTheme();
 
-// aparecer/desaparecer idiomas qnd apertar no icone
+changeThemeBtn.addEventListener('change', function() {
+    toggleDarkMode();
+
+    localStorage.removeItem('dark');
+
+    if(document.body.classList.contains('dark')) {
+        localStorage.setItem('dark', 1);
+    }
+});
+
+// OPÇÕES DE IDIOMAS
 function Mudarestado(idiomas) {
     const display = document.querySelector("#idiomas").style.display;
-    if(display == "none"){
-        document.getElementById(idiomas).style.display = 'flex';
-    }else{
-        document.getElementById(idiomas).style.display = 'none';
 
+    if(display == "flex"){
+        document.getElementById(idiomas).style.display = 'none';
+    }else{
+        document.getElementById(idiomas).style.display = 'flex';
     }
+};
+
+// TROCA DE IDIOMAS
+function english() {
+    var english = document.getElementsByClassName("en");
+    english[0].innerHTML = "from ground to world";
+    english[1].innerHTML = "Home";
+    english[2].innerHTML = "About Us";
+    english[3].innerHTML = "Products";
+    english[4].innerHTML = "Stores";
+    english[5].innerHTML = "Contact";
+    english[6].innerHTML = "We produce all-natural citrus juices, with the aim of offering people a healthier life.";
+    english[7].innerHTML = "All our fruits are monitored from planting to harvesting, ensuring a high quality standard.";
+    english[8].innerHTML = "Our Products";
+    english[9].innerHTML = "Where to Buy?";
+    english[10].innerHTML = "Da Roça © 2022 - All rights reserved - CNPJ: 00.000.000/0000-00";
+    english[11].innerHTML = "Branding Design | Web Design for ";
+}
+function portuguese() {
+    var portuguese = document.getElementsByClassName("pt");
+    portuguese[0].innerHTML = "do mato para o mundo";
+    portuguese[1].innerHTML = "Início";
+    portuguese[2].innerHTML = "Sobre Nós";
+    portuguese[3].innerHTML = "Produtos";
+    portuguese[4].innerHTML = "Lojas";
+    portuguese[5].innerHTML = "Contato";
+    portuguese[6].innerHTML = "Produzimos sucos cítricos totalmente naturais, com o objetivo de oferecer uma vida mais saudável para as pessoas.";
+    portuguese[7].innerHTML = "Todas as nossas frutas são monitoradas do plantio até a colheita, garantindo um padrão de qualidade alto.";
+    portuguese[8].innerHTML = "Nossos Produtos";
+    portuguese[9].innerHTML = "Onde Comprar";
+    portuguese[10].innerHTML = "Da Roça © 2022 - Todos os direitos reservados - CNPJ: 00.000.000/0000-00";
+    portuguese[11].innerHTML = "Branding Design | Web Design por ";
 }
 
-// mudar tema claro/escuro
-const theme = document.querySelector(".light-dark");
+// PLAY/PAUSE - VIDEO PRINCIPAL
+var video = document.querySelector(".video-view");
+var btnPlay = document.querySelector(".video-play");
 
-theme.addEventListener('click', () => {
-    document.body.classList.toggle('.dark-theme');
-//alterar icones sol e lua
-
-})
+btnPlay.addEventListener("click", function () {
+    if(video.paused){
+        video.play();
+        document.getElementById('pausebtn').style.display = "block";
+        document.getElementById('playbtn').style.display = "none";
+    }else{
+        video.pause();
+        document.getElementById('pausebtn').style.display = "none";
+        document.getElementById('playbtn').style.display = "block";
+    }
+});
