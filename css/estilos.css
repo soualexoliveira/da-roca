@@ -4,7 +4,7 @@
     --color-text-menu: #0D0D0D;
     --color-text: #e8e8e8;
     --color-bg: #e8e8e8;
-    --color-text-footer: #0D0D0Daa;
+    --color-text-footer: #0d0d0daa;
     --color-text-footer-link: #0d0d0d;
     --color-video-hover: #00000033;
     --color-btn: #e8e8e8;
@@ -16,6 +16,8 @@
 
     --lua: block;
     --sol: none;
+
+    --svg: #0d0d0d;
 }
 
 .dark{
@@ -33,6 +35,8 @@
 
     --lua: none;
     --sol: block;
+
+    --svg: #e8e8e8;
 }
 
 *, :before, :after {
@@ -104,8 +108,9 @@ header {
     height: 11vh;
 }
 
-.certificados img{
-    height: 6.5vh;
+.certificados img, svg{
+    height: 8.6vh;
+    fill: var(--svg);
 }
 
 .faixa2{
