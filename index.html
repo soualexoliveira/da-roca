@@ -14,12 +14,12 @@
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
     <title>Da Roça - Sucos Cítricos</title>
 </head>
-<body>
+<body class="light">
     <header>
         <div class="faixa1" id="inicio">
             <div class="logo">
                 <h1><a href="index.html">Da Roça</a></h1>
-                <p id="slogan" class="en pt">do mato para o mundo</p>
+                <p id="slogan"></p>
             </div>
             <div class="certificados">
                     <svg version="1.1" id="Camada_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -372,11 +372,11 @@
         <div class="faixa2">
             <nav class="menu">
                 <ul>
-                    <li id="menu-inicio"><a href="index.html" class="en pt">Início<div class="border"></div></a></li>
-                    <li id="menu-historia"><a href="pages/historia.html" class="en pt">Sobre Nós</a></li>
-                    <li id="menu-produtos"><a href="pages/produtos.html" class="en pt">Produtos</a></li>
-                    <li id="menu-lojas"><a href="pages/lojas.html" class="en pt">Lojas</a></li>
-                    <li id="menu-contato"><a href="pages/contato.html" class="en pt">Contato</a></li>
+                    <li id="menu-inicio"><a id="home" href="index.html"><div class="border"></div></a></li>
+                    <li id="menu-historia"><a id="story" href="pages/historia.html"></a></li>
+                    <li id="menu-produtos"><a id="products" href="pages/produtos.html"></a></li>
+                    <li id="menu-lojas"><a id="stores" href="pages/lojas.html"></a></li>
+                    <li id="menu-contato"><a id="contact" href="pages/contato.html"></a></li>
                 </ul>
             </nav>
             <div class="social-media">
@@ -406,11 +406,11 @@
             <div class="acessibilidade">
                 <ul>
                     <li>
-                        <i aria-hidden="true" class="fa-solid fa-earth-americas" title="Idioma" onclick="Mudarestado('idiomas')"></i>
-                        <div id="idiomas">
-                            <div class="select-idioma" id="PT" onclick="portuguese()">PT</div>
+                        <i aria-hidden="true" class="fa-solid fa-earth-americas" id='planet' title="Idioma"></i>
+                        <div class="idioma" id="idioma">
+                            <div class="select-idioma" id="portugues">PT</div>
                             <span class="divisor-idiomas">|</span>
-                            <div class="select-idioma" id="EN" onclick="english()">EN</div>
+                            <div class="select-idioma" id="ingles">EN</div>
                         </div>
                     </li>
                     <li>
@@ -429,12 +429,12 @@
             <div id="chamada-box">
                 <div class="chamada-box1">
                     <div class="chamada-titulo">
-                        <h2 class="en pt">Produzimos sucos cítricos totalmente naturais, com o objetivo de oferecer uma vida mais saudável para as pessoas.</h2>
-                        <p class="en pt">Todas as nossas frutas são monitoradas do plantio até a colheita, garantindo um padrão de qualidade alto.</p>
+                        <h2 id="banner1"></h2>
+                        <p id="banner2"></p>
                     </div>
                     <div class="chamada-btn">
-                        <a href="pages/produtos.html" role="button" id="btn-produtos" class="en pt">Nossos Produtos</a>
-                        <a href="pages/lojas.html" role="button" id="btn-wherebuy" class="btn-wherebuy-1 en pt">Onde Comprar</a>
+                        <a href="pages/produtos.html" role="button" id="btn-produtos"></a>
+                        <a href="pages/lojas.html" role="button" id="btn-wherebuy" class="btn-wherebuy-1"></a>
                     </div>
                 </div>
                 <div class="chamada-imagem">
@@ -460,19 +460,23 @@
         -->
     </main>
     <div class="aviso" id="aviso">
+        <div class="aviso-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="aviso-lang">
+            <i class="fa-solid fa-language"></i>
+            <div id="aviso-toogle" class="aviso-toggle"></div>
+        </div>
         <div class="aviso-conteudo">
-            <div class="aviso-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-            <h2>Aviso Importante</h2>
-            <p>Este site faz parte de um projeto fantasma criado exclusivamete para o meu portfólio.</p> 
-            <p>Da Roça é apenas uma empresa fictícia criada para fins estudantis, sem nenhum interesse financeiro. Não há cockies ou permissões para acessá-lo.</p>
-            <p>Caso tenha dúvidas ou sugestões, entre em contato comigo. Deixarei meus dados no final da página Contatos.</p>
+            <h2 id="aviso-title"></h2>
+            <p id="aviso-p1"></p> 
+            <p id="aviso-p2"></p>
+            <p id="aviso-p3"></p>
         </div>
     </div>
     <footer>
-        <p class="en pt">Da Roça © 2022 - Todos os direitos reservados - CNPJ: 00.000.000/0000-00</p>
-        <p><span class="en pt">Branding Design | Web Design  por </span><a href="#">Alex Oliveira</a></p>
+        <p id="footer1"></p>
+        <p><span id="footer2"></span><a href="#">Alex Oliveira</a></p>
     </footer>
 </body>
 </html>

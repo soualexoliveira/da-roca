@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600&display=swap');
 
-:root{
+:root, .light{
     --color-text-menu: #0D0D0D;
     --color-text: #e8e8e8;
     --color-bg: #e8e8e8;
@@ -54,7 +54,7 @@ body {
 #aviso{
     width: 100vw;
     min-height:100vh;
-    background-color: #0D0D0D;
+    background-color: #0d0d0d;
     position: fixed;
     top: 50%;
     left: 0px;
@@ -70,21 +70,21 @@ body {
     margin: 0 auto;
 }
 
-.aviso-conteudo .aviso-btn{
-    position: absolute;
-    top: 3%;
-    right: 2%;
+.aviso-btn{
+    position: relative;
+    top: 1.5vh;
+    left: 97.2vw;
     width: 2vw;
     height: 2vw;
     cursor: pointer;
     border-radius: 50%;
 }
 
-.aviso-conteudo .aviso-btn:hover{
+.aviso-btn:hover{
     background: #e8e8e8;
 }
 
-.aviso-conteudo .aviso-btn:hover i{
+.aviso-btn:hover i{
     color: #0d0d0d;
 }
 
@@ -94,6 +94,37 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 5%;
+}
+
+.aviso-lang{
+    position: relative;
+    top: 40.3vh;
+    left: 27.2vw;
+    width: 2.5vw;
+    height: 6.4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #e8e8e8;
+    cursor: pointer;
+}
+
+.aviso-lang:hover{
+    background-color: #e8e8e8;
+    border-radius: 15%;
+    color: #0D0D0D;
+}
+
+.aviso-lang i{
+    font-size: 1.5vw;
+}
+
+.aviso-lang .aviso-toggle{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    cursor:pointer;
 }
 
 .aviso-conteudo h2{
@@ -114,7 +145,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 95vw;
     margin: 0 auto;
 }
 
@@ -128,18 +159,17 @@ header {
 }
 
 .faixa1 .logo{
-    width: 30%;
+    width: 40vw;
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
 .faixa1 .logo h1{
-    width: 40%;
+    width: 10.5vw;
     font-family: 'Allura', cursive;
     font-weight: 400;
-    font-size: 2.5rem;
-    
+    font-size: 2.5rem;    
 }
 
 .faixa1 .logo a{
@@ -147,12 +177,12 @@ header {
 }
 
 .logo #slogan{
-    width: 60%;
+    width: 25vw;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     color: var(--color-text-menu);
     font-size: 1rem;
-    padding-left: 7%;
+    padding-left: 2vw;
     border-left: 0.1vw solid var(--color-text-menu);
     height: 2vw;
     line-height: 2vw;
@@ -286,7 +316,7 @@ header {
     color: var(--color-one);
 }
 
-#idiomas{
+#idioma{
     position: absolute;
     top: 0%;
     right: 120%;
