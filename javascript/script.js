@@ -1,3 +1,20 @@
+// CARREGAR AVISO
+window.addEventListener("load", function(){
+    if (window.localStorage.getItem('aviso') != 'lido'){
+    document.querySelector(".aviso").style.display = "block";
+    }else
+    document.querySelector(".aviso").style.display = "none";
+});
+
+//FECHAR AVISO
+document.querySelector(".aviso-btn").addEventListener("click", function(){
+    document.querySelector(".aviso").style.display = "none";
+    window.localStorage.setItem('aviso','lido');
+});
+
+//RESETAR AVISO APÓS UM TEMPO
+
+
 // MODO DARK
 const changeThemeBtn = document.querySelector("#change-theme");
 
